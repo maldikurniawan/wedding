@@ -7,7 +7,7 @@ const Welcome = () => {
 
   useEffect(() => {
     // Disable scrolling when the component mounts
-    document.body.style.overflow = "hidden";
+    // document.body.style.overflow = "hidden";
 
     // Extract the 'to' query parameter from the URL
     const params = new URLSearchParams(window.location.search);
