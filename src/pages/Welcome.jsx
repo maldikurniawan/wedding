@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { FaHome } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { Link } from "react-scroll"; // Importing Link from react-scroll
 
 const Welcome = () => {
   const [guestName, setGuestName] = useState("Bapak/Ibu/Saudara/i");
@@ -21,44 +22,66 @@ const Welcome = () => {
     };
   }, []);
 
+  // Function to handle invitation click and delayed scroll
   const openInvitation = () => {
-    // Enable scrolling when the button is clicked
-    document.body.style.overflow = "auto";
-    console.log("Invitation opened!");
+    // Optional: Perform any action before scrolling, like showing a loading message or animation
+    setTimeout(() => {
+      // Trigger smooth scroll to the "Opening" section
+      document.getElementById("Opening")?.scrollIntoView({ behavior: "smooth" });
+      
+      // Optional: Re-enable scrolling after the scroll is triggered
+      document.body.style.overflow = "auto";
+    }, 500); // Match the duration for any UI transition (e.g., fade-out)
   };
 
   return (
     <div
-      className="bg-white opacity-90 flex justify-center items-center h-screen"
-      id="welcome"
+      className="h-screen inset-0 bg-cover bg-center flex justify-center items-center transition-opacity duration-500"
+      style={{ backgroundImage: "url('/assets/images/couple.jpeg')" }}
     >
-      <div className="text-center">
-        {/* Title */}
-        <h2 className="font-serif mb-4 text-3xl text-black">The Wedding Of</h2>
+      {/* Black overlay with opacity */}
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
 
-        {/* Circular Image */}
-        <img
-          src="/assets/images/bg.png"
-          alt="background"
-          className="w-56 h-56 rounded-full border-4 border-white shadow-lg mb-4 mx-auto"
-        />
+      {/* Content */}
+      <div className="relative text-center text-white p-4">
+        {/* Wedding Header */}
+        <h2 className="font-serif text-2xl md:text-3xl mb-2">The Wedding of</h2>
 
         {/* Couple's Names */}
-        <h2 className="font-serif mb-4 text-3xl text-black">Putra &amp; Putri</h2>
+        <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">
+          Putra &amp; Putri
+        </h1>
+
+        {/* Event Status */}
+        <p className="text-lg mb-4">ACARA SUDAH BERLANGSUNG!</p>
+        <p className="text-sm mb-8">
+          Hadir secara virtual melalui siaran langsung Instagram:
+        </p>
+
+        {/* Instagram Button */}
+        <a
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2 bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-full text-white text-sm shadow-lg transition-all duration-300"
+        >
+          <FaInstagram />
+          @putraperkasa
+        </a>
 
         {/* Guest Name */}
-        <div className="text-gray-900 text-lg">
-          Kepada Yth {guestName}
+        <div className="mt-8 text-lg italic">
+          <p>Kepada Yth.</p>
+          <p className="font-bold mb-4">{guestName}</p>
+          <hr />
         </div>
 
-        {/* Open Invitation Button */}
+        {/* Scroll or Open Invitation Button */}
         <button
-          type="button"
-          className="shadow-lg rounded-full flex mx-auto items-center gap-2 border-black border mt-3 px-6 py-2 bg-white text-black font-semibold"
-          onClick={openInvitation}
+          onClick={openInvitation} // Use openInvitation to trigger scroll with a delay
+          className="mt-8 flex items-center justify-center mx-auto gap-2 px-6 py-3 bg-white text-black rounded-full shadow-lg text-sm font-semibold hover:bg-gray-200 transition-all duration-300"
         >
-          <FaHome />
-          <span>Open Invitation</span>
+          <span>Klik untuk Melihat Detail Acara</span>
         </button>
       </div>
     </div>
