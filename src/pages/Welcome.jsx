@@ -28,7 +28,7 @@ const Welcome = () => {
     setTimeout(() => {
       // Trigger smooth scroll to the "Opening" section
       document.getElementById("Opening")?.scrollIntoView({ behavior: "smooth" });
-      
+
       // Optional: Re-enable scrolling after the scroll is triggered
       document.body.style.overflow = "auto";
     }, 500); // Match the duration for any UI transition (e.g., fade-out)
@@ -45,6 +45,9 @@ const Welcome = () => {
       {/* Content */}
       <div className="relative text-center text-white p-4">
         {/* Wedding Header */}
+        <div className="flex justify-center mb-4">
+          <img src="assets/images/ring.png" className="w-20" alt="Wedding Ring" />
+        </div>
         <h2 className="font-serif text-2xl md:text-3xl mb-2">The Wedding of</h2>
 
         {/* Couple's Names */}

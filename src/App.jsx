@@ -1,11 +1,13 @@
-import Welcome from "./pages/Welcome";
-import Opening from "./pages/Opening";
-import Wedding from "./pages/Wedding";
-import Story from "./pages/Story";
-import Gallery from "./pages/Gallery";
-import Message from "./pages/Message";
-import Thanks from "./pages/Thanks";
-import Footer from "./pages/Footer";
+import {
+  Welcome,
+  Opening,
+  Wedding,
+  Story,
+  Gallery,
+  Location,
+  Thanks,
+  Footer,
+} from "@/pages/";
 
 export default function App() {
   return (
@@ -14,10 +16,10 @@ export default function App() {
       <Opening />
       <Wedding />
       <Story />
-      <Gallery/>
-      <Message/>
-      <Thanks/>
-      <Footer/>
+      <Gallery />
+      <Location />
+      <Thanks />
+      <Footer />
     </div>
   )
 }

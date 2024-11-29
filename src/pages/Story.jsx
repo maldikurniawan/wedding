@@ -4,16 +4,44 @@ const Story = () => {
   const stories = [
     {
       title: "Jumpa Pertama",
-      date: "10 OKTOBER 2015",
+      date: "10 JANUARI 2018",
       description:
-        "Pertama kali kami dipertemukan di sebuah acara malam keakraban di kampus Universitas Dian Nuswantoro. Sebagai seorang mahasiswa baru, kala itu Dinda melihat Indra sedang sibuk memegang megaphone (toa) di tengah hiruk pikuk acara. Belum ada sesuatu yang spesial, kala itu justru Dinda melihat Indra banyak menerima surat pink (tanda kagum) dari teman sesama mahasiswa barunya.",
+        "Aku pertama kali bertemu Putri di sebuah seminar teknologi di Jakarta. Saat itu, aku hanya menganggapnya sebagai salah satu peserta seperti yang lain. Tapi, ada sesuatu dari caranya tersenyum yang menarik perhatianku. Kami sempat berbicara singkat saat istirahat makan siang, dan itu menjadi awal dari semuanya.",
       image: "assets/images/cowo.png",
     },
     {
-      title: "Kembali Berjumpa",
-      date: "12 DESEMBER 2016",
+      title: "Pertemanan yang Tumbuh",
+      date: "12 FEBRUARI 2018",
       description:
-        "Setelah lama tidak berkomunikasi, Dinda dan Indra kembali dipertemukan di acara kampus lainnya. Kali ini, interaksi kami menjadi lebih sering, dan perlahan tumbuh rasa nyaman di antara kami.",
+        "Setelah pertemuan itu, kami bertukar kontak dan mulai sering berkomunikasi. Awalnya, hanya tentang hal-hal umum, tapi lama-lama aku merasa nyaman berbicara dengannya. Putri sering bertanya tentang pekerjaanku, dan aku menikmati mendengar cerita-ceritanya tentang fotografi. Perlahan, aku menyadari bahwa aku mulai menunggu-nunggu pesan darinya.",
+      image: "assets/images/cewe.png",
+    },
+    {
+      title: "Kencan Pertama",
+      date: "16 JULI 2018",
+      description:
+        "Akhirnya, aku mengumpulkan keberanian untuk mengajaknya makan malam. Kami memilih restoran kecil yang tenang, tempat yang kupikir cocok untuk berbicara lebih dalam. Aku menghabiskan waktu berhari-hari memikirkan apakah aku harus mengungkapkan perasaanku. Malam itu, aku memberanikan diri, dan saat dia menerima, rasanya seperti dunia ini lebih indah dari sebelumnya.",
+      image: "assets/images/cowo.png",
+    },
+    {
+      title: "Tahun-tahun Penuh Kenangan",
+      date: "2019 - 2020",
+      description:
+        "Hubungan kami semakin dekat, dan aku merasa Putri adalah orang yang selalu membuat hariku lebih baik. Kami melakukan banyak hal bersama yang menjadi kenangan indah. Liburan pertama kami ke Bali adalah salah satu momen terbaik dalam hidupku; melihat dia tertawa lepas di tepi pantai adalah pemandangan yang tidak akan pernah kulupakan. Ketika aku memulai usaha baru, dia adalah orang pertama yang percaya padaku, dan dukungannya membuatku merasa bahwa aku bisa mengatasi segala tantangan. Aku juga bangga bisa mendukungnya di pameran fotografinya; melihat hasil karya Putri dipuji banyak orang membuatku semakin yakin bahwa dia adalah orang yang luar biasa. Setiap momen yang kami lewati selama tahun-tahun itu semakin memperkuat keyakinanku bahwa Putri adalah bagian penting dalam hidupku.",
+      image: "assets/images/cewe.png",
+    },
+    {
+      title: "Momen Lamaran",
+      date: "20 DESEMBER 2021",
+      description:
+        "Aku tahu Putri adalah orang yang ingin kuhabiskan sisa hidupku bersama. Aku menyiapkan momen lamaran ini dengan hati-hati, memilih tempat dan waktu yang spesial. Aku ingin dia tahu betapa berharganya dia bagiku. Hari itu adalah salah satu hari paling menegangkan, tapi ketika dia menerima lamaranku, aku merasa menjadi pria paling beruntung di dunia.",
+      image: "assets/images/cowo.png",
+    },
+    {
+      title: "Pernikahan yang Bahagia",
+      date: "24 MEI 2022",
+      description:
+        "Hari pernikahan kami adalah hari yang tidak akan pernah kulupakan. Saat aku melihatnya berjalan ke arahku dengan gaun putihnya, aku tahu aku telah membuat keputusan terbaik dalam hidupku. Pernikahan kami sederhana, tapi penuh makna. Aku bersyukur atas perjalanan panjang yang membawa kami ke hari itu, dan aku siap untuk menjalani kehidupan baru bersama Putri.",
       image: "assets/images/cewe.png",
     },
   ];
@@ -21,9 +49,9 @@ const Story = () => {
   return (
     <div className="h-fit bg-white flex flex-col items-center py-12 px-4">
       {/* Title */}
-      <h1 className="text-pink-500 text-4xl font-semibold mb-2">Jalan Berdua</h1>
-      <p className="text-gray-500 text-lg mb-12">
-        Kisah kasih sejak awal kami berjumpa
+      <h1 className="text-pink-500 text-4xl text-center font-semibold mb-2">Jalan Berdua</h1>
+      <p className="text-gray-500 text-lg text-center mb-12">
+        Kisah kasih sejak awal kami berjumpa dari sudut pandang saya (Putra)
       </p>
 
       {/* Timeline Container */}

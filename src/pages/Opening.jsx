@@ -5,7 +5,7 @@ const Opening = () => {
   return (
     <div
       id="Opening"
-      className="h-fit my-12 mx-4 sm:mx-12 md:mx-24 lg:mx-40 xl:mx-[200px] flex flex-col items-center justify-center text-center bg-white p-4"
+      className="h-fit py-12 mx-4 sm:mx-12 md:mx-24 lg:mx-40 xl:mx-[200px] flex flex-col items-center justify-center text-center bg-white p-4"
     >
       {/* Title */}
       <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-pink-500">
@@ -30,7 +30,7 @@ const Opening = () => {
             Putra Perkasa, S.Kom.
           </p>
           <p className="text-center md:text-right">
-            Putra Bapak Bunari <br />& Ibu Suratun
+            Putra Bapak Sumanto <br />& Ibu Susanti
           </p>
         </div>
 
@@ -46,7 +46,7 @@ const Opening = () => {
             Putra Perkasa, S.Kom.
           </p>
           <p className="text-center md:text-right">
-            Putra Bapak Bunari <br />& Ibu Suratun
+            Putra Bapak Sumanto <br />& Ibu Susanti
           </p>
         </div>
 
@@ -68,7 +68,7 @@ const Opening = () => {
             Putri Pertiwi, S.I.Kom.
           </p>
           <p className="text-center md:text-left">
-            Putri Bapak Totok Somo Dipoyono <br />& Ibu Setyo Listiani
+            Putri Bapak Sutrisno <br />& Ibu Pertiwi
           </p>
         </div>
       </div>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Thanks = () => {
   return (
-    <div className='h-screen'>Thanks</div>
+    <div className='h-[200px]'>Thanks</div>
   )
 }
 
