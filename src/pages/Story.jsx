@@ -39,7 +39,7 @@ const Story = () => {
     },
     {
       title: "Pernikahan yang Bahagia",
-      date: "2 OKTOBER 2020",
+      date: "2 OKTOBER 2030",
       description:
         "Hari pernikahan kami adalah hari yang tak akan pernah kulupakan. Saat aku melihatnya berjalan ke arahku dengan gaun putihnya, aku tahu aku telah membuat keputusan terbaik dalam hidupku. Pernikahan kami sederhana, tapi penuh makna. Aku siap menjalani hidup baru bersama Putri. Namun, semua berubah ketika aku terbangun dari koma setelah kecelakaan. Putri kini bersama orang lain. Kenyataan itu menghancurkan hatiku. Dia melanjutkan hidup tanpa aku, dan aku hanya bisa menatapnya dari jauh, mengenang masa lalu yang kini tinggal kenangan.",
       image: "assets/images/cewe.png",
@@ -76,7 +76,7 @@ const Story = () => {
             >
               <h2 className="text-xl font-semibold text-pink-500">{story.title}</h2>
               <p className="text-gray-500 text-sm my-4">{story.date}</p>
-              <p className="text-gray-500 text-sm text-justify">{story.description}</p>
+              <p className="text-gray-500 text-sm">{story.description}</p>
 
               {/* Arrow */}
               <div
