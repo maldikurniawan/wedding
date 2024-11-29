@@ -36,11 +36,12 @@ const Welcome = () => {
 
   return (
     <div
+      id="Beranda"
       className="h-screen inset-0 bg-cover bg-center flex justify-center items-center transition-opacity duration-500"
       style={{ backgroundImage: "url('/assets/images/couple.jpeg')" }}
     >
       {/* Black overlay with opacity */}
-      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
       {/* Content */}
       <div className="relative text-center text-white p-4">
@@ -48,15 +49,15 @@ const Welcome = () => {
         <div className="flex justify-center mb-4">
           <img src="assets/images/ring.png" className="w-20" alt="Wedding Ring" />
         </div>
-        <h2 className="font-serif text-2xl md:text-3xl mb-2">The Wedding of</h2>
+        <h2 className="text-2xl md:text-3xl mb-2 font-cookie">The Wedding of</h2>
 
         {/* Couple's Names */}
-        <h1 className="font-serif text-4xl md:text-5xl font-bold mb-6">
+        <h1 className="font-cookie text-6xl md:text-8xl mb-6">
           Putra &amp; Putri
         </h1>
 
         {/* Event Status */}
-        <p className="text-lg mb-4">ACARA SUDAH BERLANGSUNG!</p>
+        <p className="text-lg mb-4 tracking-wider font-medium">ACARA SUDAH BERLANGSUNG!</p>
         <p className="text-sm mb-8">
           Hadir secara virtual melalui siaran langsung Instagram:
         </p>
@@ -66,9 +67,9 @@ const Welcome = () => {
           href="#"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 bg-pink-600 hover:bg-pink-700 px-4 py-2 rounded-full text-white text-sm shadow-lg transition-all duration-300"
+          className="mt-4 bg-pink-500 hover:bg-pink-600 gap-2 text-white font-medium py-2 px-4 rounded-full inline-flex items-center"
         >
-          <FaInstagram />
+          <FaInstagram className="w-8 h-8" />
           @putraperkasa
         </a>
 

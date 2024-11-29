@@ -20,16 +20,16 @@ const Gallery = () => {
   ];
 
   return (
-    <div className="h-fit py-20 bg-pink-50 flex flex-col items-center text-center px-4">
+    <div id="Gallery" className="h-fit py-20 bg-gray-50 flex flex-col items-center text-center px-4">
       <div>
-        <h1 className="text-pink-500 text-2xl sm:text-4xl font-semibold mb-4">
+        <h1 className="text-3xl md:text-6xl text-pink-500 font-cookie mb-4">
           #PutraPutri
         </h1>
-        <p className="text-gray-500 text-sm sm:text-lg mb-12 px-4 sm:px-12 lg:px-32 xl:px-60">
+        <p className="text-gray-500 tracking-tight text-sm sm:text-lg mb-12 px-4 sm:px-12 lg:px-[340px]">
           "And of His signs is that He created for you from yourselves mates
           that you may find tranquility in them; and He placed between you
           affection and mercy. Indeed in that are signs for a people who give
-          thought" (Ar-Rum 30:21).
+          thought" <br /> (Ar-Rum 30:21).
         </p>
       </div>
       <div className="w-full sm:w-3/4 lg:w-2/3 mx-auto">

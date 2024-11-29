@@ -88,9 +88,9 @@ export default function App() {
           cursor: 'pointer'
         }}>
         {!isPlayingMusic ?
-          <TbMusicOff className='w-12 h-12 p-2 bg-pink-600 rounded-full' />
+          <TbMusicOff className='w-10 h-10 p-2 bg-pink-600 rounded-full' />
           :
-          <TbMusic className='w-12 h-12 p-2 bg-pink-600 rounded-full' />
+          <TbMusic className='w-10 h-10 p-2 bg-pink-600 rounded-full' />
         }
       </button>
     </div>

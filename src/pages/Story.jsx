@@ -39,19 +39,21 @@ const Story = () => {
     },
     {
       title: "Pernikahan yang Bahagia",
-      date: "24 MEI 2022",
+      date: "2 OKTOBER 2020",
       description:
-        "Hari pernikahan kami adalah hari yang tidak akan pernah kulupakan. Saat aku melihatnya berjalan ke arahku dengan gaun putihnya, aku tahu aku telah membuat keputusan terbaik dalam hidupku. Pernikahan kami sederhana, tapi penuh makna. Aku bersyukur atas perjalanan panjang yang membawa kami ke hari itu, dan aku siap untuk menjalani kehidupan baru bersama Putri.",
+        "Hari pernikahan kami adalah hari yang tak akan pernah kulupakan. Saat aku melihatnya berjalan ke arahku dengan gaun putihnya, aku tahu aku telah membuat keputusan terbaik dalam hidupku. Pernikahan kami sederhana, tapi penuh makna. Aku siap menjalani hidup baru bersama Putri. Namun, semua berubah ketika aku terbangun dari koma setelah kecelakaan. Putri kini bersama orang lain. Kenyataan itu menghancurkan hatiku. Dia melanjutkan hidup tanpa aku, dan aku hanya bisa menatapnya dari jauh, mengenang masa lalu yang kini tinggal kenangan.",
       image: "assets/images/cewe.png",
     },
   ];
 
   return (
-    <div className="h-fit bg-white flex flex-col items-center py-12 px-4">
+    <div id="Kisah" className="h-fit bg-white flex flex-col items-center py-20 px-4">
       {/* Title */}
-      <h1 className="text-pink-500 text-4xl text-center font-semibold mb-2">Jalan Berdua</h1>
+      <h1 className="text-4xl md:text-6xl text-pink-500 font-cookie mb-2">
+        Our Story
+      </h1>
       <p className="text-gray-500 text-lg text-center mb-12">
-        Kisah kasih sejak awal kami berjumpa dari sudut pandang saya (Putra)
+        Kisah kasih sejak awal kami berjumpa dari sudut pandang saya (Putra).
       </p>
 
       {/* Timeline Container */}
@@ -73,8 +75,8 @@ const Story = () => {
                 }`}
             >
               <h2 className="text-xl font-semibold text-pink-500">{story.title}</h2>
-              <p className="text-gray-500 text-sm mt-2">{story.date}</p>
-              <p className="text-gray-700 mt-4 text-justify">{story.description}</p>
+              <p className="text-gray-500 text-sm my-4">{story.date}</p>
+              <p className="text-gray-500 text-sm text-justify">{story.description}</p>
 
               {/* Arrow */}
               <div

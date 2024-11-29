@@ -6,7 +6,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        cookie: ['"Cookie"', 'cursive'], // Add the Cookie font here
+      },
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {

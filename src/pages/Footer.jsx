@@ -6,17 +6,17 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const footerMenu = [
-    { head: "MENU", title: "Beranda", link: "Hero" },
-    { head: "MENU", title: "Pembuka", link: "About" },
-    { head: "MENU", title: "Akad Nikah", link: "Service" },
-    { head: "MENU", title: "Kisah Kasih", link: "Pricing" },
-    { head: "MENU", title: "Gallery", link: "FAQ" },
-    { head: "MENU", title: "Lokasi", link: "Contact" },
+    { head: "MENU", title: "Beranda", link: "Beranda" },
+    { head: "MENU", title: "Pembuka", link: "Opening" },
+    { head: "MENU", title: "Akad Nikah", link: "Akad" },
+    { head: "MENU", title: "Kisah Kasih", link: "Kisah" },
+    { head: "MENU", title: "Gallery", link: "Gallery" },
+    { head: "MENU", title: "Lokasi", link: "Lokasi" },
   ];
 
   const alamatFooter = {
     company: "Putra & Putri Wedding",
-    address: "Jl. Kelengkeng 10, Way Huwi, Kec. Jati Agung, Kabupaten Lampung Selatan, Lampung 35365",
+    address: "GSG Universitas Lampung, Kec. Rajabasa, Kota Bandar Lampung",
     song: "Anandito Anisa - Pernikahan Impian",
   };
 
