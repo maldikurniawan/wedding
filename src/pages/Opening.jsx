@@ -51,7 +51,7 @@ const Opening = () => {
         </div>
 
         {/* Heart icon */}
-        <div className="relative flex mt-4 mb-10 sm:my-0 sm:mt-0 items-center justify-center">
+        <div className="relative flex mt-4 mb-10 md:my-0 md:mt-0 items-center justify-center">
           <FaHeart className="absolute text-pink-500 w-10 h-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2" />
         </div>
 

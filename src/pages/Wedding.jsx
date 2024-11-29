@@ -31,7 +31,7 @@ const Wedding = () => {
         </p>
 
         {/* Event Box */}
-        <div className="bg-white/20 border border-white rounded-lg shadow-lg p-10 mt-6 text-white w-11/12 md:w-1/4">
+        <div className="bg-white/20 border border-white rounded-lg shadow-lg p-6 sm:p-8 lg:p-10 mt-6 text-white w-[1/2] sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-1/4">
           <h2 className="text-xl md:text-2xl tracking-wider mb-4">AKAD NIKAH</h2>
           <hr />
 
