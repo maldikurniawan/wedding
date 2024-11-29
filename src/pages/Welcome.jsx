@@ -35,11 +35,12 @@ const Welcome = () => {
   };
 
   return (
-    <div
-      id="Beranda"
-      className="h-screen inset-0 bg-cover bg-center flex justify-center items-center transition-opacity duration-500"
-      style={{ backgroundImage: "url('/assets/images/couple.jpeg')" }}
-    >
+    <div id="Beranda" className="relative h-screen flex justify-center items-center">
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url('/assets/images/couple.jpeg')" }}
+      ></div>
       {/* Black overlay with opacity */}
       <div className="absolute inset-0 bg-black bg-opacity-60"></div>
 
