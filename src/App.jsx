@@ -12,17 +12,19 @@ import { useEffect, useRef, useState } from "react";
 import music from "/assets/music/sound.mp3";
 import { FaArrowUp } from "react-icons/fa";
 import { TbMusic, TbMusicOff } from "react-icons/tb";
+import Sakura from "./components/Sakura";
 
 export default function App() {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
-  const [isPlayingMusic, setIsPlayingMusic] = useState(true);
+  const [isPlayingMusic, setIsPlayingMusic] = useState(false);
+  const [showSakura, setShowSakura] = useState(false);
 
   // Music
   const audioRef = useRef(new Audio(music));
 
   // Ensure audio plays when the component is mounted
   useEffect(() => {
-    audioRef.current.volume = 0.4;
+    audioRef.current.volume = 0.8;
     audioRef.current.loop = true;
     if (isPlayingMusic) {
       audioRef.current.play();
@@ -51,7 +53,8 @@ export default function App() {
 
   return (
     <div className="overflow-x-hidden">
-      <Welcome />
+      {showSakura && <Sakura />}
+      <Welcome setIsPlayingMusic={setIsPlayingMusic} setShowSakura={setShowSakura} />
       <Opening />
       <Wedding />
       <Story />

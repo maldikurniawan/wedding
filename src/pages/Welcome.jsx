@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { FaInstagram } from "react-icons/fa";
-import { Link } from "react-scroll"; // Importing Link from react-scroll
 
-const Welcome = () => {
+const Welcome = ({ setIsPlayingMusic, setShowSakura  }) => {
   const [guestName, setGuestName] = useState("Bapak/Ibu/Saudara/i");
 
   useEffect(() => {
     // Disable scrolling when the component mounts
-    // document.body.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
 
     // Extract the 'to' query parameter from the URL
     const params = new URLSearchParams(window.location.search);
@@ -24,14 +23,13 @@ const Welcome = () => {
 
   // Function to handle invitation click and delayed scroll
   const openInvitation = () => {
-    // Optional: Perform any action before scrolling, like showing a loading message or animation
+    setShowSakura(true);
     setTimeout(() => {
       // Trigger smooth scroll to the "Opening" section
       document.getElementById("Opening")?.scrollIntoView({ behavior: "smooth" });
-
-      // Optional: Re-enable scrolling after the scroll is triggered
       document.body.style.overflow = "auto";
-    }, 500); // Match the duration for any UI transition (e.g., fade-out)
+      setIsPlayingMusic(true);
+    }, 500);
   };
 
   return (
@@ -83,7 +81,7 @@ const Welcome = () => {
 
         {/* Scroll or Open Invitation Button */}
         <button
-          onClick={openInvitation} // Use openInvitation to trigger scroll with a delay
+          onClick={openInvitation}
           className="mt-8 flex items-center justify-center mx-auto gap-2 px-6 py-3 bg-white text-black rounded-full shadow-lg text-sm font-semibold hover:bg-gray-200 transition-all duration-300"
         >
           <span>Klik untuk Melihat Detail Acara</span>

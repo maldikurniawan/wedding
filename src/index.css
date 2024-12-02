@@ -3,7 +3,33 @@
 @tailwind utilities;
 
 .cookie-regular {
-    font-family: "Cookie", cursive;
-    font-weight: 400;
-    font-style: normal;
+  font-family: 'Cookie', cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px) rotate(0deg);
+    opacity: 0.5;
   }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.sakura {
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; /* Ensure the animation repeats infinitely */
+  position: absolute;
+  top: -50px;
+  opacity: 0.8;
+  pointer-events: none;
+}
+.sakura img {
+  width: 30px; /* Adjust the size of sakura flowers */
+  height: 30px;
+  object-fit: cover;
+}
