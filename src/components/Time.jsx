@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Time = ({ endTime }) => {
+const Time = ({ endTime, onComplete }) => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
     hours: 0,
@@ -14,6 +14,9 @@ const Time = ({ endTime }) => {
     const difference = new Date(endTime).getTime() - now.getTime();
 
     if (difference <= 0) {
+      if (onComplete) {
+        onComplete(); // Trigger the onComplete callback when the countdown reaches zero
+      }
       return { days: 0, hours: 0, minutes: 0, seconds: 0 };
     }
 
@@ -30,11 +33,11 @@ const Time = ({ endTime }) => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    return () => clearInterval(interval); // Cleanup
+    return () => clearInterval(interval); // Cleanup the interval on component unmount
   }, [endTime]);
 
   return (
-    <div className="flex flex-col items-center text-white p-6 rounded-lg shadow-lg">
+    <div className="flex flex-col items-center text-white p-6 rounded-lg">
       {/* Countdown Numbers */}
       <div className="flex gap-4 mb-4">
         {Object.entries(timeLeft).map(([unit, value]) => (

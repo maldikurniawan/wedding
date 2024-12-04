@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaInstagram } from "react-icons/fa";
-import { Time } from "@/components"
+import { Time } from "@/components";
 
 const Welcome = ({ setIsPlayingMusic, setShowSakura }) => {
   const [guestName, setGuestName] = useState("Bapak/Ibu/Saudara/i");
   const [isCountdownOver, setIsCountdownOver] = useState(false);
+
   const handleCountdownComplete = () => {
+    console.log("Countdown is complete!"); // Debugging: check if onComplete is called
     setIsCountdownOver(true);
   };
 
@@ -56,7 +58,7 @@ const Welcome = ({ setIsPlayingMusic, setShowSakura }) => {
         <h2 className="text-2xl md:text-3xl mb-2 font-cookie">The Wedding of</h2>
 
         {/* Couple's Names */}
-        <h1 className="font-cookie text-6xl md:text-8xl mb-2">
+        <h1 className="font-cookie text-6xl md:text-8xl mb-4">
           Putra &amp; Putri
         </h1>
 
@@ -66,7 +68,7 @@ const Welcome = ({ setIsPlayingMusic, setShowSakura }) => {
               {/* Countdown Timer */}
               <div className="text-3xl font-bold">
                 <Time
-                  endTime="2024-12-04T11:04:59"
+                  endTime="2025-12-04T11:11:59"
                   onComplete={handleCountdownComplete}
                 />
               </div>
