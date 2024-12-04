@@ -39,20 +39,20 @@ const Time = ({ endTime, onComplete }) => {
   return (
     <div className="flex flex-col items-center text-white p-6 rounded-lg">
       {/* Countdown Numbers */}
-      <div className="flex gap-4 mb-4">
+      <div className="flex flex-wrap gap-2 sm:gap-4 mb-4 justify-center">
         {Object.entries(timeLeft).map(([unit, value]) => (
           <div
             key={unit}
-            className="flex flex-col items-center bg-pink-500 text-white rounded-full w-20 h-20 justify-center font-bold text-lg"
+            className="flex flex-col items-center bg-pink-500 text-white rounded-full w-16 h-16 justify-center font-bold text-lg sm:w-20 sm:h-20"
           >
             <span>{value}</span>
-            <span className="text-sm font-medium capitalize">{unit}</span>
+            <span className="text-xs sm:text-sm font-medium capitalize">{unit}</span>
           </div>
         ))}
       </div>
 
       {/* Add to Calendar Button */}
-      <button className="bg-pink-500 hover:bg-pink-600 text-white py-2 px-6 rounded-full font-medium text-sm">
+      <button className="bg-pink-500 hover:bg-pink-600 text-white py-2 px-6 rounded-full font-medium text-sm mt-2">
         Add to Calendar
       </button>
     </div>
