@@ -56,7 +56,7 @@ const Wedding = () => {
           href="#"
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 bg-pink-500 hover:bg-pink-600 gap-2 text-white font-medium py-2 px-4 rounded-full inline-flex items-center"
+          className="mt-8 bg-pink-500 hover:bg-pink-600 gap-2 animate-bounce text-white font-medium py-2 px-4 rounded-full inline-flex items-center"
         >
           <FaInstagram className="w-8 h-8" />
           @putraperkasa

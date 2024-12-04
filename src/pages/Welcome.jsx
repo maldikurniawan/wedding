@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { FaInstagram } from "react-icons/fa";
+import { Time } from "@/components"
 
-const Welcome = ({ setIsPlayingMusic, setShowSakura  }) => {
+const Welcome = ({ setIsPlayingMusic, setShowSakura }) => {
   const [guestName, setGuestName] = useState("Bapak/Ibu/Saudara/i");
+  const [isCountdownOver, setIsCountdownOver] = useState(false);
+  const handleCountdownComplete = () => {
+    setIsCountdownOver(true);
+  };
 
   useEffect(() => {
     // Disable scrolling when the component mounts
@@ -51,40 +56,57 @@ const Welcome = ({ setIsPlayingMusic, setShowSakura  }) => {
         <h2 className="text-2xl md:text-3xl mb-2 font-cookie">The Wedding of</h2>
 
         {/* Couple's Names */}
-        <h1 className="font-cookie text-6xl md:text-8xl mb-6">
+        <h1 className="font-cookie text-6xl md:text-8xl mb-2">
           Putra &amp; Putri
         </h1>
 
-        {/* Event Status */}
-        <p className="text-lg mb-4 tracking-wider font-medium">ACARA SUDAH BERLANGSUNG!</p>
-        <p className="text-sm mb-8">
-          Hadir secara virtual melalui siaran langsung Instagram:
-        </p>
+        <div className="text-center">
+          {!isCountdownOver ? (
+            <div className="text-lg font-medium">
+              {/* Countdown Timer */}
+              <div className="text-3xl font-bold">
+                <Time
+                  endTime="2024-12-04T11:04:59"
+                  onComplete={handleCountdownComplete}
+                />
+              </div>
+            </div>
+          ) : (
+            <>
+              {/* Event Status */}
+              <div className="text-lg mb-4 tracking-wider font-medium">ACARA SUDAH BERLANGSUNG!</div>
+              <div className="text-sm mb-8">
+                Hadir secara virtual melalui siaran langsung Instagram:
+              </div>
 
-        {/* Instagram Button */}
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-4 bg-pink-500 hover:bg-pink-600 gap-2 text-white font-medium py-2 px-4 rounded-full inline-flex items-center"
-        >
-          <FaInstagram className="w-8 h-8" />
-          @putraperkasa
-        </a>
+              {/* Instagram Button */}
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-pink-500 hover:bg-pink-600 gap-2 text-white animate-bounce font-medium py-2 px-4 rounded-full inline-flex items-center"
+              >
+                <FaInstagram className="w-8 h-8" />
+                @putraperkasa
+              </a>
+            </>
+          )}
+        </div>
 
         {/* Guest Name */}
-        <div className="mt-8 text-lg italic">
-          <p>Kepada Yth.</p>
-          <p className="font-bold mb-4">{guestName}</p>
+        <div className="mt-4 text-lg italic">
+          <div>Kepada Yth.</div>
+          <div className="font-bold mb-4">{guestName}</div>
           <hr />
         </div>
 
         {/* Scroll or Open Invitation Button */}
         <button
           onClick={openInvitation}
-          className="mt-8 flex items-center justify-center mx-auto gap-2 px-6 py-3 bg-white text-black rounded-full shadow-lg text-sm font-semibold hover:bg-gray-200 transition-all duration-300"
+          className="mt-8 relative flex items-center justify-center mx-auto gap-2 px-6 py-3 bg-white text-black rounded-full shadow-lg text-sm font-semibold hover:bg-gray-200 transition-all duration-300"
         >
-          <span>Klik untuk Melihat Detail Acara</span>
+          <span className="absolute inset-0 animate-ping rounded-full bg-white opacity-50 mx-10"></span>
+          <span className="relative">Klik untuk Melihat Detail Acara</span>
         </button>
       </div>
     </div>

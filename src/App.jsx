@@ -7,12 +7,12 @@ import {
   Location,
   Thanks,
   Footer,
-} from "@/pages/";
+} from "@/pages";
 import { useEffect, useRef, useState } from "react";
 import music from "/assets/music/sound.mp3";
 import { FaArrowUp } from "react-icons/fa";
 import { TbMusic, TbMusicOff } from "react-icons/tb";
-import Sakura from "./components/Sakura";
+import { Sakura } from "@/components";
 
 export default function App() {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
