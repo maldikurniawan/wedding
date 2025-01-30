@@ -9,15 +9,15 @@ const Thanks = () => {
         </h1>
       </div>
 
-      <div className="text-base sm:text-lg md:text-xl text-gray-500 leading-tight text-center max-w-4xl mx-auto">
+      <div className="text-base sm:text-lg md:text-xl text-gray-500 leading-relaxed text-center max-w-4xl mx-auto">
         <p>
-          Berdasarkan kondisi saat ini, tanpa mengurangi rasa hormat, diharapkan tetap bisa menjalin silaturahmi melalui media online, bukan dengan kontak fisik secara langsung.
+          Dengan segala kerendahan hati, kami mengucapkan terima kasih yang
+          sebesar-besarnya atas doa, restu, serta kehadiran saudara/i sekalian.
         </p>
-        <p className="mb-4">
-          Mohon pengertiannya.
+        <p className="mt-4">
+          Semoga kebahagiaan dan keberkahan senantiasa menyertai kita semua.
         </p>
-        <p className="mb-4">
-          Atas segala do'a dan restu saudara/i, kami ucapkan terima kasih. <br />
+        <p className="mt-6 font-semibold italic">
           Wassalamualaikum warahmatullahi wabarakatuh.
         </p>
       </div>
